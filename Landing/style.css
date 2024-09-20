@@ -258,8 +258,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row; /* Align items in a row */
-    margin-top: auto; /* Push footer to the bottom */
+    flex-direction: row; 
+    margin-top: auto; 
 }
 
 footer .logo {
@@ -330,7 +330,7 @@ footer .logo {
     color: #f2f2f2;
     opacity: 0.3;
     text-align: center;
-    width: 100%; /* Ensure copyright spans full width */
+    width: 100%; 
     margin-top: 1rem;
 }
 
@@ -403,16 +403,16 @@ footer .logo {
 
 
  #slides .carousel_1 {
-    background-image: url('/imagenes/biberones.webp'); /* Reemplaza con la ruta de tu imagen */
+    background-image: url('/imagenes/biberones.webp'); 
  }
  #slides .carousel_2 {
-    background-image: url('/imagenes/comideras.webp'); /* Reemplaza con la ruta de tu imagen */
+    background-image: url('/imagenes/comideras.webp'); 
  }
  #slides .carousel_3 {
-    background-image: url('/imagenes/mochila.webp'); /* Reemplaza con la ruta de tu imagen */
+    background-image: url('/imagenes/mochila.webp'); 
  }
  #slides .carousel_4 {
-    background-image: url('/imagenes/panalera.webp'); /* Reemplaza con la ruta de tu imagen */
+    background-image: url('/imagenes/panalera.webp');
  }
  #controls {
     margin: -180px 0 0 0;
