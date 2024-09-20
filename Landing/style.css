@@ -1,0 +1,813 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&di');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+.cats {
+    display: flex;
+    width: 100%;
+    height: 530px;
+    flex-wrap: wrap;
+}
+
+.container .header .navbar ul {
+    display: flex;
+    width: 40vw;
+    justify-content: space-around; /* dejamos espacios entre medo del navbar */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.cats img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    max-width: 25%;
+    transition: .5s ease;
+}
+
+.cats img:hover {
+    cursor:not-allowed;
+    width: 3.5%;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.Encabeza {
+    text-align: center;
+}
+
+.contenedor11 {
+    background-color: ghostwhite;
+}
+
+/*Organizamos nuestro header*/
+header {
+    background-color: rgb(175, 5, 5);
+    width: 100%;
+    display: flex;
+    align-items: center; /* Centramos verticalmente */
+    justify-content: space-between; /* Espaciamos los elementos */
+    padding: 10px 20px; /*alto del header */
+}
+
+.header img {
+    width: 4vw;
+    height: 4vw;
+}
+
+input{
+    background-color: rgba(194, 35, 35, 0.914);
+    font-size: 1rem;
+    margin: 0 auto; /* Centramos horizontalmente */
+    padding: 10px;
+    border: none; /* Quitamos el borde por defecto */
+    border-radius: 5px; /* Añadimos bordes redondeados */
+    flex: 1; /* Ocupamos el espacio disponible */
+    color: white;
+}
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.688);
+    font-style: bold;
+    text-align: center;
+}
+
+.header button {
+    background-color: rgba(182, 3, 3, 0.854);
+    border: none;
+    padding: 5px;
+}
+
+.container .bod h2{
+    text-align: center;
+    font-family: "PT Serif", serif;
+    font-size: 4rem;
+    background-color: #fcf9f9;
+}
+
+.slider-frame {
+    width: 100%;
+    max-width: 1280px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 15s linear infinite;
+}
+
+.slider-frame li{
+    list-style: none;
+    width: 100%;
+}
+
+.slider-frame img {
+    width: 100%;
+    height: auto;
+}
+
+/*Configuramos los tiempos del slider*/
+@keyframes slide {
+    0% { margin-left: 0%; }
+    20% { margin-left: 0%; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    95% { margin-left: -300%; }
+}
+
+
+
+/*Configuramos las resolciones*/
+@media (max-width: 768px) {
+    .cats img {
+        max-width: 50%;
+    }
+    .header img {
+        width: 8vw;
+        height: 8vw;
+    }
+    .header input {
+        font-size: 0.9rem;
+    }
+    .container .bod h2 {
+        font-size: 2rem;
+    }
+    .slider-frame {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .cats img {
+        max-width: 100%;
+    }
+    .header img {
+        width: 10vw;
+        height: 10vw;
+    }
+    .header input {
+        font-size: 0.8rem;
+    }
+    .container .bod h2 {
+        font-size: 1.5rem;
+    }
+    .slider-frame {
+        margin: 10px auto;
+    }
+}
+
+.container .tarjetas h1{
+    text-align: center;
+    font-family: "PT Serif", serif;
+    background-color:white;
+}
+
+.container .tarjetas .card-body{
+    font-family: "PT Serif", serif;
+    background-color: rgba(244, 238, 227, 0.939);
+}
+
+/* cogiguramos el header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar .menu-navbar {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header .navbar .menu-navbar li {
+    margin-left: 20px;
+}
+
+.header .navbar .menu-navbar li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .header input {
+        width: calc(100% - 40px);
+        margin: 10px 0;
+    }
+
+    .header .navbar {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .header .navbar .menu-navbar {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .header .navbar .menu-navbar li {
+        margin: 0;
+    }
+}
+
+
+/* Configuramos el footer */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+
+/*Footer*/
+footer {
+    width: 100%;
+    background-color: rgb(175, 5, 5);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Align items in a row */
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+footer .logo {
+    height: 80px;
+    margin-right: 1rem;
+    align-items: center;
+}
+
+.social-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid #f2f2f2;
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+}
+
+.social-icon:hover {
+    background-color: #121212;
+}
+
+.social-icon:nth-of-type(1) {
+    background-image: url(/imagenes/4494464.png);
+}
+.social-icon:nth-of-type(2) {
+    background-image: url(/imagenes/4494465.png);
+}
+
+.social-icon:nth-of-type(3) {
+    background-image: url(/imagenes/4494468.png);
+}
+
+.social-icon:nth-of-type(4) {
+    background-image: url(/imagenes/4494470.png);
+}
+
+.footer-menu-container {
+    list-style: none;
+    color: #f2f2f2;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem; 
+}
+
+.menu-item {
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.menu-item:hover {
+    opacity: 1;
+}
+
+.copyright {
+    color: #f2f2f2;
+    opacity: 0.3;
+    text-align: center;
+    width: 100%; /* Ensure copyright spans full width */
+    margin-top: 1rem;
+}
+
+
+
+
+
+/* pagina de bebes*/
+
+#carousel {
+    margin: 0 auto;
+    width: 1000px; /* Aumenta el ancho del carrusel */
+    max-width: 100%;
+    text-align: center;
+ }
+ #carousel input[type=radio] {
+    display: none;
+ }
+ #carousel label {
+    cursor: pointer;
+    text-decoration: none;
+ }
+ #slides {
+    padding: 10px;
+    border: none;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+ }
+ #overflow {
+    width: 100%;
+    overflow: hidden;
+ }
+ #carousel1:checked ~ #slides .inner {
+    margin-left: 0;
+ }
+ #carousel2:checked ~ #slides .inner {
+    margin-left: -100%;
+ }
+ #carousel3:checked ~ #slides .inner {
+    margin-left: -200%;
+ }
+ #carousel4:checked ~ #slides .inner {
+    margin-left: -300%;
+ }
+ #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    display: flex; /* Asegura que los elementos hijos se alineen horizontalmente */
+    height: 400px; /* Aumenta la altura del carrusel */
+    animation: slide 16s infinite; /* Añade la animación */
+ }
+ @keyframes slide {
+    0%, 20% { margin-left: 0; }
+    25%, 45% { margin-left: -100%; }
+    50%, 70% { margin-left: -200%; }
+    75%, 95% { margin-left: -300%; }
+ }
+ #slides .carousel {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #000000;
+    background-size: contain; /* Asegura que la imagen de fondo se ajuste dentro de la diapositiva */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+
+ #slides .carousel_1 {
+    background-image: url('/imagenes/biberones.webp'); /* Reemplaza con la ruta de tu imagen */
+ }
+ #slides .carousel_2 {
+    background-image: url('/imagenes/comideras.webp'); /* Reemplaza con la ruta de tu imagen */
+ }
+ #slides .carousel_3 {
+    background-image: url('/imagenes/mochila.webp'); /* Reemplaza con la ruta de tu imagen */
+ }
+ #slides .carousel_4 {
+    background-image: url('/imagenes/panalera.webp'); /* Reemplaza con la ruta de tu imagen */
+ }
+ #controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+ }
+ #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+ }
+ #controls label:hover {
+    opacity: 1;
+ }
+ #carousel1:checked ~ #controls label:nth-child(2),
+ #carousel2:checked ~ #controls label:nth-child(3),
+ #carousel3:checked ~ #controls label:nth-child(4),
+ #carousel4:checked ~ #controls label:nth-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float: right;
+    margin: 0 -50px 0 0;
+    display: block;
+ }
+ #carousel1:checked ~ #controls label:nth-last-child(2),
+ #carousel2:checked ~ #controls label:nth-last-child(3),
+ #carousel3:checked ~ #controls label:nth-last-child(4),
+ #carousel4:checked ~ #controls label:nth-last-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float: left;
+    margin: 0 0 0 -50px;
+    display: block;
+ }
+ #bullets {
+    margin: 150px 0 0;
+    text-align: center;
+ }
+ #bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #ccc;
+    margin: 0 10px;
+ }
+ #carousel1:checked ~ #bullets label:nth-child(1),
+ #carousel2:checked ~ #bullets label:nth-child(2),
+ #carousel3:checked ~ #bullets label:nth-child(3),
+ #carousel4:checked ~ #bullets label:nth-child(4) {
+    background: #444;
+ }
+ @media screen and (max-width: 900px) {
+    #carousel1:checked ~ #controls label:nth-child(2),
+    #carousel2:checked ~ #controls label:nth-child(3),
+    #carousel3:checked ~ #controls label:nth-child(4),
+    #carousel4:checked ~ #controls label:nth-child(1),
+    #carousel1:checked ~ #controls label:nth-last-child(2),
+    #carousel2:checked ~ #controls label:nth-last-child(3),
+    #carousel3:checked ~ #controls label:nth-last-child(4),
+    #carousel4:checked ~ #controls label:nth-last-child(1) {
+       margin: 0;
+    }
+    #slides {
+       max-width: calc(100% - 140px);
+       margin: 0 auto;
+    }
+ }
+
+ .card-container {
+    display: flex;
+    flex-direction: row; /* Cambia la dirección del flex a fila */
+    justify-content: center;
+    gap: 25px;
+    margin-top: 100px;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en varias filas */
+}
+
+.cardd {
+    width: 325px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+
+.cardd:hover {
+    transform: translateY(-20px);
+}
+
+.cardd img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+}
+
+.txt {
+    text-align: center;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Cambia la dirección del flex a columna en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .cardd {
+        width: 90%; /* Ajusta el ancho de las tarjetas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-content h1 {
+        font-size: 18px; /* Ajusta el tamaño de la fuente en pantallas muy pequeñas */
+    }
+
+    .card-content {
+        padding: 15px; /* Reduce el padding en pantallas muy pequeñas */
+    }
+}
+
+
+
+/* pagina de bebes*/
+
+#carousel {
+    margin: 0 auto;
+    width: 1000px; /* Aumenta el ancho del carrusel */
+    max-width: 100%;
+    text-align: center;
+ }
+ #carousel input[type=radio] {
+    display: none;
+ }
+ #carousel label {
+    cursor: pointer;
+    text-decoration: none;
+ }
+ #slides {
+    padding: 10px;
+    border: none;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+ }
+ #overflow {
+    width: 100%;
+    overflow: hidden;
+ }
+ #carousel1:checked ~ #slides .inner {
+    margin-left: 0;
+ }
+ #carousel2:checked ~ #slides .inner {
+    margin-left: -100%;
+ }
+ #carousel3:checked ~ #slides .inner {
+    margin-left: -200%;
+ }
+ #carousel4:checked ~ #slides .inner {
+    margin-left: -300%;
+ }
+ #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    display: flex; /* Asegura que los elementos hijos se alineen horizontalmente */
+    height: 400px; /* Aumenta la altura del carrusel */
+    animation: slide 16s infinite; /* Añade la animación */
+ }
+ @keyframes slide {
+    0%, 20% { margin-left: 0; }
+    25%, 45% { margin-left: -100%; }
+    50%, 70% { margin-left: -200%; }
+    75%, 95% { margin-left: -300%; }
+ }
+ #slides .carousel {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #000000;
+    background-size: contain; /* Asegura que la imagen de fondo se ajuste dentro de la diapositiva */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+
+ #slides .carousel_1 {
+    background-image: url('/imagenes/biberones.webp'); /* Reemplaza con la ruta de tu imagen */
+ }
+ #slides .carousel_2 {
+    background-image: url('/imagenes/comideras.webp'); /* Reemplaza con la ruta de tu imagen */
+ }
+ #slides .carousel_3 {
+    background-image: url('/imagenes/mochila.webp'); /* Reemplaza con la ruta de tu imagen */
+ }
+ #slides .carousel_4 {
+    background-image: url('/imagenes/panalera.webp'); /* Reemplaza con la ruta de tu imagen */
+ }
+ #controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+ }
+ #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+ }
+ #controls label:hover {
+    opacity: 1;
+ }
+ #carousel1:checked ~ #controls label:nth-child(2),
+ #carousel2:checked ~ #controls label:nth-child(3),
+ #carousel3:checked ~ #controls label:nth-child(4),
+ #carousel4:checked ~ #controls label:nth-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float: right;
+    margin: 0 -50px 0 0;
+    display: block;
+ }
+ #carousel1:checked ~ #controls label:nth-last-child(2),
+ #carousel2:checked ~ #controls label:nth-last-child(3),
+ #carousel3:checked ~ #controls label:nth-last-child(4),
+ #carousel4:checked ~ #controls label:nth-last-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float: left;
+    margin: 0 0 0 -50px;
+    display: block;
+ }
+ #bullets {
+    margin: 150px 0 0;
+    text-align: center;
+ }
+ #bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #ccc;
+    margin: 0 10px;
+ }
+ #carousel1:checked ~ #bullets label:nth-child(1),
+ #carousel2:checked ~ #bullets label:nth-child(2),
+ #carousel3:checked ~ #bullets label:nth-child(3),
+ #carousel4:checked ~ #bullets label:nth-child(4) {
+    background: #444;
+ }
+ @media screen and (max-width: 900px) {
+    #carousel1:checked ~ #controls label:nth-child(2),
+    #carousel2:checked ~ #controls label:nth-child(3),
+    #carousel3:checked ~ #controls label:nth-child(4),
+    #carousel4:checked ~ #controls label:nth-child(1),
+    #carousel1:checked ~ #controls label:nth-last-child(2),
+    #carousel2:checked ~ #controls label:nth-last-child(3),
+    #carousel3:checked ~ #controls label:nth-last-child(4),
+    #carousel4:checked ~ #controls label:nth-last-child(1) {
+       margin: 0;
+    }
+    #slides {
+       max-width: calc(100% - 140px);
+       margin: 0 auto;
+    }
+ }
+
+ .card-container {
+    display: flex;
+    flex-direction: row; /* Cambia la dirección del flex a fila */
+    justify-content: center;
+    gap: 25px;
+    margin-top: 100px;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en varias filas */
+}
+
+.cardd {
+    width: 325px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+
+.cardd:hover {
+    transform: translateY(-20px);
+}
+
+.cardd img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+}
+
+.txt {
+    text-align: center;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Cambia la dirección del flex a columna en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .cardd {
+        width: 90%; /* Ajusta el ancho de las tarjetas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-content h1 {
+        font-size: 18px; /* Ajusta el tamaño de la fuente en pantallas muy pequeñas */
+    }
+
+    .card-content {
+        padding: 15px; /* Reduce el padding en pantallas muy pequeñas */
+    }
+}
+
+
+/*Formulario de cont*/
+.form-contanos{
+    font-family:"Lora", serif;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-auto-columns: repeat (2,1fr);
+}
+
+.form-contanos h1{
+    text-align: center;
+    font-family: "Roboto Mono", monospace;
+}
+
+.form-contanos input{
+    width: 100%;
+    padding: 15px 10px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    outline: 0px;
+}
+
+.form-contanos input::placeholder{
+    color: white;
+    max-width: 530px;
+    max-height: 530px;
+    min-width: 140px;
+    min-height: 140px;
+}
+
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 200px;
+    margin: 0 auto;
+}
